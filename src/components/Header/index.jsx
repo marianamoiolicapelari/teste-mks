@@ -1,19 +1,19 @@
 import React from "react"
 
-import {Header} from '../Menu/style'
+import {TheHeader, H1, Span} from './style'
 
 
-export const Menu = () => {
+export const Header = () => {
     return (
-        <Header>             
+        <TheHeader>             
             <div>
-                <h1>MKS Sistemas</h1>
+                <H1>MMC<Span>Shop</Span></H1>
             </div>
             <div>
                 <img src="./src/assets/shop.png" alt="" />
                 <input type="number" />
             </div>
-        </Header>
+        </TheHeader>
         
     )
 }

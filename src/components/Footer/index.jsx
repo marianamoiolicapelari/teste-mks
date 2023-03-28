@@ -1,12 +1,11 @@
 import React from "react"
 
-import { TheFooter } from '../Footer/style'
-
+import { TheFooter, H1 } from '../Footer/style'
 
 export const Footer = () => {
     return (
         <TheFooter>             
-           <h1>Rodapé</h1>           
+           <H1>MMC Shop © Todos os direitos reservados</H1>           
         </TheFooter>
         
     )
