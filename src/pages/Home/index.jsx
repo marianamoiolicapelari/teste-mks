@@ -1,9 +1,13 @@
 import React from "react"
 
+import { Main } from '../Home/style'
+// import { Card } from '../../components/Card'
+
 export const Home = () => {
     return (
-        <div>
-            <h1>Home</h1>
-        </div>
+        <Main>
+            {/* <Card /> */}
+            <p>Home</p>
+        </Main>
     )
 }
