@@ -34,12 +34,14 @@ export const Shop = styled.div`
     background-color: #FFF;
     border-radius: .5rem;
     padding: .5rem;
+    cursor: pointer;
 `
 
 export const InputShop = styled.input`
     border: none;
     width: 30px;
     text-align: center;
+    pointer-events: none;
 `
 
 

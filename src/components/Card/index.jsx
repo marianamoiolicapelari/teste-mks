@@ -1,16 +1,19 @@
 import React from "react";
+import watch from '../../assets/watch.png'
 
-import { TheCard } from '../Card/style'
+import { TheCard, Img,  CardTitle, CardTitleH2, CardTitleH3, CardSubTitle, Button } from '../Card/style'
 
 export const Card = () => {
-    <TheCard>
-        <p>CARD</p>
-        {/* <img src="" alt="" />
-        <div>
-            <h2>Apple Watch Series 4</h2>
-            <h3>R$399</h3>
-        </div>
-        <p>Redesigned from scratch and completely revised.</p>
-        <button>COMPRAR</button> */}
-    </TheCard>
+    return (
+        <TheCard>
+            <Img src={watch} alt="" />
+            <CardTitle>
+                <CardTitleH2>Apple Watch Series 4</CardTitleH2>
+                <CardTitleH3>R$399</CardTitleH3>
+            </CardTitle>
+            <CardSubTitle>Redesigned from scratch and completely revised.</CardSubTitle>
+            <Button>COMPRAR</Button>
+        </TheCard>
+    )
 }
+

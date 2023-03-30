@@ -4,8 +4,11 @@ export const TheFooter = styled.div`
     display: flex;
     justify-content: center;
     background-color: #EEEEEE;
-    padding: 1.5rem;
-   
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
 `
 export const H1 = styled.h1`
     font-size: .9rem;
