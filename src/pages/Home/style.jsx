@@ -6,5 +6,5 @@ export const Main = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 3rem 10rem 5rem 10rem ;
+    padding: 9rem 10rem 3rem 10rem ;
 `

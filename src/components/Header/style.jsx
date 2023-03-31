@@ -7,6 +7,9 @@ export const TheHeader = styled.div`
     justify-content: space-between;
     padding: 1.5rem 2rem;
     background-color: #ab44d4;
+    position: fixed;
+    top: 0;
+    width: 100%;
 `
 
 export const H1 = styled.p`
