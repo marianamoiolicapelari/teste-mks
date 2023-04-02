@@ -31,7 +31,7 @@ const Card = () => {
                     <Img src={product.photo} alt="" />
                     <CardTitle>
                         <CardTitleH2>{product.brand}</CardTitleH2>
-                        <CardTitleH3>{product.price}</CardTitleH3>
+                        <CardTitleH3>R$ {parseFloat(product.price).toFixed(0)}</CardTitleH3>
                     </CardTitle>
                     <CardSubTitle>{product.description}</CardSubTitle>
                     <Button><FiShoppingBag />COMPRAR</Button>
