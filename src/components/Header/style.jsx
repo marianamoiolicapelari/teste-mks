@@ -29,22 +29,23 @@ export const Span = styled.p`
     line-height: 19px;
     padding-left: .2rem;
 `
-export const Shop = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 70px;
-    background-color: #FFF;
-    border-radius: .5rem;
-    padding: .5rem;
-    cursor: pointer;
-`
-
 export const InputShop = styled.input`
     border: none;
     width: 30px;
     text-align: center;
     pointer-events: none;
 `
+export const Shop = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    background-color: #FFF;
+    border-radius: .5rem;
+    padding: .5rem;
+    cursor: pointer;
+    border: none;
+`
+
 
 
