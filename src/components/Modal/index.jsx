@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiFillCloseCircle } from "react-icons/ai";
+import { ItemsModal } from '../ItemsModal'
 
 import {
     TheModal,
@@ -20,15 +21,19 @@ export const Modal = ({ isOpen, setModalOpen, children }) => {
             <TheModal>
                 <HeaderModal>
                     <TitleModal>Carrinho <br /> de compras</TitleModal>
-                    <ButtonCloseModal onClick={setModalOpen}><AiFillCloseCircle size={30} /></ButtonCloseModal>
+                    <ButtonCloseModal onClick={setModalOpen}><AiFillCloseCircle size={40} /></ButtonCloseModal>
                 </HeaderModal>
                 <BodyModal>
                     {children}
-                    <FooterModal>
-                        <TextFooterModal>Total:</TextFooterModal>
-                        <ValueFooterModal type="text" placeholder='valor' disabled/>
-                    </FooterModal>
+                    <ItemsModal />
+                    <ItemsModal />
+                
+                 
                 </BodyModal>
+                <FooterModal>
+                    <TextFooterModal>Total:</TextFooterModal>
+                    <ValueFooterModal type="text" placeholder='valor' disabled />
+                </FooterModal>
                 <ButtonCheckout>Finalizar Compra</ButtonCheckout>
             </TheModal>
         )

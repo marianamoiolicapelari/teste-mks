@@ -12,14 +12,14 @@ export const TheModal = styled.div`
 export const HeaderModal = styled.div`
     display: flex;
     justify-content: space-between;
-    align-itens: center;
+    align-items: center;
     padding: 1.5rem;
 `
 
 export const TitleModal = styled.p`
     color: #fff;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 `
 
 export const ButtonCloseModal = styled.button`
@@ -27,23 +27,26 @@ export const ButtonCloseModal = styled.button`
     border: none;
     background-color: transparent;
 `
+
 export const BodyModal = styled.div`
     display: flex;
+    height: 65%;
     flex-direction: column;
-    justify-content: space-between;
-    /* align-items: bottom; */
-    padding: 1.5rem;
-    background-color: red;
+    align-items: center;
+    padding: 0 1.5rem;
 `
+
 export const FooterModal = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem 1.5rem;
 `
+
 export const TextFooterModal = styled.p`
     color: #fff;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 `
 
 export const ValueFooterModal = styled.input`
