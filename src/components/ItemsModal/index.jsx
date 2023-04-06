@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Items } from './style'
 
 export const ItemsModal = () => {
-    return (
+     return (
         <Items>
             <img src="" alt="" />
-            index
+            <h2></h2>
+            <div>
+                <button>
+                    <i>-</i>
+                </button>
+                <span>2</span>
+                <button>
+                    <i>+</i>
+                </button>
+            </div>
+            <p></p>
         </Items>
     )
 }

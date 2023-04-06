@@ -1,5 +1,6 @@
 import React from 'react'
-import { AiFillCloseCircle } from "react-icons/ai";
+import { useState } from 'react'
+import { AiFillCloseCircle } from "react-icons/ai"
 import { ItemsModal } from '../ItemsModal'
 
 import {
@@ -14,7 +15,10 @@ import {
     ButtonCheckout
 } from './style'
 
-export const Modal = ({ isOpen, setModalOpen, children }) => {
+export const Modal = ({ isOpen, setModalOpen }) => {
+  
+    const [cart, setCart] = useState([1, 2])
+
 
     if (isOpen) {
         return (
@@ -24,11 +28,9 @@ export const Modal = ({ isOpen, setModalOpen, children }) => {
                     <ButtonCloseModal onClick={setModalOpen}><AiFillCloseCircle size={40} /></ButtonCloseModal>
                 </HeaderModal>
                 <BodyModal>
-                    {children}
-                    <ItemsModal />
-                    <ItemsModal />
-                
-                 
+                    {cart.map((item) => (
+                        <ItemsModal />
+                    ))}
                 </BodyModal>
                 <FooterModal>
                     <TextFooterModal>Total:</TextFooterModal>
