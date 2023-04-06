@@ -17,7 +17,7 @@ import {
 
 export const Modal = ({ isOpen, setModalOpen }) => {
   
-    const [cart, setCart] = useState([1, 2])
+    const [cart, setCart] = useState([])
 
 
     if (isOpen) {
@@ -31,6 +31,13 @@ export const Modal = ({ isOpen, setModalOpen }) => {
                     {cart.map((item) => (
                         <ItemsModal />
                     ))}
+                    {cart.length === 0 && (
+                 
+                            <h3>
+                                Carrinho de compras vazio
+                            </h3>
+                       
+                    )}
                 </BodyModal>
                 <FooterModal>
                     <TextFooterModal>Total:</TextFooterModal>
