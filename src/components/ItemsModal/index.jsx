@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Items } from './style'
+import axios from 'axios'
 
 export const ItemsModal = () => {
-     return (
+
+    return (
         <Items>
             <img src="" alt="" />
             <h2></h2>

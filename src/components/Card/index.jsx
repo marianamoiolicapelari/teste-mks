@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import { FiShoppingBag } from "react-icons/fi";
-import { useState, useEffect } from 'react'
 
-import { TheCard, Img, CardTitle, CardTitleH2, CardTitleH3, CardSubTitle, Button } from '../Card/style'
+import {
+    TheCard,
+    Img,
+    CardTitle,
+    CardTitleH2,
+    CardTitleH3,
+    CardSubTitle,
+    Button
+} from '../Card/style'
 
 const Card = () => {
 
@@ -16,11 +23,12 @@ const Card = () => {
         const data = response.data.products
         setProducts(data)
     }
-  
 
     useEffect(() => {
         getProducts()
     }, [])
+
+    const handleAddItem = () => { }
 
     return (
         <>
@@ -34,7 +42,7 @@ const Card = () => {
                         <CardTitleH3>R$ {parseFloat(product.price).toFixed(0)}</CardTitleH3>
                     </CardTitle>
                     <CardSubTitle>{product.description}</CardSubTitle>
-                    <Button><FiShoppingBag />COMPRAR</Button>
+                    <Button onClick={handleAddItem}><FiShoppingBag />COMPRAR</Button>
                 </TheCard>
             )))}
 

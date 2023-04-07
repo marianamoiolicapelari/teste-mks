@@ -1,7 +1,7 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiFillCloseCircle } from "react-icons/ai"
 import { ItemsModal } from '../ItemsModal'
+import axios from 'axios'
 
 import {
     TheModal,
@@ -15,10 +15,19 @@ import {
     ButtonCheckout
 } from './style'
 
-export const Modal = ({ isOpen, setModalOpen }) => {
-  
-    const [cart, setCart] = useState([])
 
+export const Modal = ({ isOpen, setModalOpen }) => {
+    const fetchData = () => {
+        axios
+            .get('https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC')
+            .then((response) => setCart(response.data.products))
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    const [cart, setCart] = useState([])
 
     if (isOpen) {
         return (
@@ -32,11 +41,11 @@ export const Modal = ({ isOpen, setModalOpen }) => {
                         <ItemsModal />
                     ))}
                     {cart.length === 0 && (
-                 
-                            <h3>
-                                Carrinho de compras vazio
-                            </h3>
-                       
+
+                        <h3>
+                            Carrinho de compras vazio
+                        </h3>
+
                     )}
                 </BodyModal>
                 <FooterModal>
