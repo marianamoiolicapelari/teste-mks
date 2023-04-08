@@ -17,6 +17,8 @@ import {
 
 
 export const Modal = ({ isOpen, setModalOpen }) => {
+    const [cart, setCart] = useState([])
+
     const fetchData = () => {
         axios
             .get('https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC')
@@ -27,7 +29,7 @@ export const Modal = ({ isOpen, setModalOpen }) => {
         fetchData()
     }, [])
 
-    const [cart, setCart] = useState([])
+   
 
     if (isOpen) {
         return (
