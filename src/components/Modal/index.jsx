@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillCloseCircle } from "react-icons/ai"
-import { ItemsModal } from '../ItemsModal'
+import { FiMinus, FiPlus } from "react-icons/fi"
+
 import axios from 'axios'
 
 import {
@@ -12,7 +13,14 @@ import {
     FooterModal,
     TextFooterModal,
     ValueFooterModal,
-    ButtonCheckout
+    ButtonCheckout,
+    Items,
+    Img,
+    Title,
+    Price,
+    ButtonQuantityComponent,
+    ButtonQuantity,
+    Button
 } from './style'
 
 
@@ -29,8 +37,6 @@ export const Modal = ({ isOpen, setModalOpen }) => {
         fetchData()
     }, [])
 
-   
-
     if (isOpen) {
         return (
             <TheModal>
@@ -39,14 +45,27 @@ export const Modal = ({ isOpen, setModalOpen }) => {
                     <ButtonCloseModal onClick={setModalOpen}><AiFillCloseCircle size={40} /></ButtonCloseModal>
                 </HeaderModal>
                 <BodyModal>
-                    {cart.map((item) => (
-                        <ItemsModal />
+                    {cart.map((product) => (
+                        <Items key={product.id}>
+                            <Img src={product.photo} alt="" />
+                            <Title>{product.brand}</Title>
+                            <ButtonQuantityComponent>
+                                <Button>
+                                    <i><FiMinus /></i>
+                                </Button>
+                                <ButtonQuantity>2</ButtonQuantity>
+                                <Button>
+                                    <i><FiPlus /></i>
+                                </Button>
+                            </ButtonQuantityComponent>
+                            <Price>{product.price}</Price>
+                        </Items>
                     ))}
                     {cart.length === 0 && (
 
-                        <h3>
+                        <Title>
                             Carrinho de compras vazio
-                        </h3>
+                        </Title>
 
                     )}
                 </BodyModal>
