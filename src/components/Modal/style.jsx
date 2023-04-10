@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TheModal = styled.div`
-    height: 100%;
+    height: 100vh;
     width: 30vw;
     background-color: #ab44d4; 
     box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);  
@@ -30,7 +30,7 @@ export const ButtonCloseModal = styled.button`
 
 export const BodyModal = styled.div`
     display: flex;
-    height: 65%;
+    /* height: 65%; */
     flex-direction: column;
     align-items: center;
     padding: 0 1.5rem;

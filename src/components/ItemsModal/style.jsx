@@ -31,18 +31,19 @@ export const Price = styled.h3`
 `
 
 export const ButtonQuantityComponent = styled.div`
-    padding: 1rem;
+    margin: 1rem;
+    border: 0.3px solid #BFBFBF;
+    border-radius: 4px;
 `
 
 export const ButtonQuantity = styled.span`
-    border: 0.3px solid #BFBFBF;
     background-color: transparent;
-    padding: .3rem;
+    padding: .3rem;  
 `
 
 export const Button = styled.button`
-    border: 0.3px solid #BFBFBF;
-    border-radius: 4px;
+    border: none;
     background-color: transparent;
     padding: .3rem;
+    cursor: pointer;
 `
