@@ -15,6 +15,7 @@ import {
 const Card = () => {
 
     const [products, setProducts] = useState([])
+    // const [id, setId] = useState([])
 
     const getProducts = async () => {
 
@@ -28,7 +29,13 @@ const Card = () => {
         getProducts()
     }, [])
 
-    const handleAddItem = () => { }
+  
+    const handleAddItem = () => { 
+        // setId(products)
+        // console.log(id)
+    }
+
+    
 
     return (
         <>

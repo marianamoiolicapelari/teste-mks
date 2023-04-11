@@ -26,6 +26,7 @@ import {
 
 export const Modal = ({ isOpen, setModalOpen }) => {
     const [cart, setCart] = useState([])
+  
 
     const fetchData = () => {
         axios
@@ -36,6 +37,9 @@ export const Modal = ({ isOpen, setModalOpen }) => {
     useEffect(() => {
         fetchData()
     }, [])
+
+
+   
 
     if (isOpen) {
         return (
