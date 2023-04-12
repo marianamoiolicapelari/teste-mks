@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { AiFillCloseCircle } from "react-icons/ai"
-import { FiMinus, FiPlus } from "react-icons/fi"
 
-import axios from 'axios'
+import {ItemsModal} from '../ItemsModal'
 
 import {
     TheModal,
@@ -13,33 +12,11 @@ import {
     FooterModal,
     TextFooterModal,
     ValueFooterModal,
-    ButtonCheckout,
-    Items,
-    Img,
-    Title,
-    Price,
-    ButtonQuantityComponent,
-    ButtonQuantity,
-    Button
+    ButtonCheckout
 } from './style'
 
 
 export const Modal = ({ isOpen, setModalOpen }) => {
-    const [cart, setCart] = useState([])
-  
-
-    const fetchData = () => {
-        axios
-            .get('https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC')
-            .then((response) => setCart(response.data.products))
-    }
-
-    useEffect(() => {
-        fetchData()
-    }, [])
-
-
-   
 
     if (isOpen) {
         return (
@@ -49,29 +26,9 @@ export const Modal = ({ isOpen, setModalOpen }) => {
                     <ButtonCloseModal onClick={setModalOpen}><AiFillCloseCircle size={40} /></ButtonCloseModal>
                 </HeaderModal>
                 <BodyModal>
-                    {cart.map((product) => (
-                        <Items key={product.id}>
-                            <Img src={product.photo} alt="" />
-                            <Title>{product.brand}</Title>
-                            <ButtonQuantityComponent>
-                                <Button>
-                                    <i><FiMinus /></i>
-                                </Button>
-                                <ButtonQuantity>2</ButtonQuantity>
-                                <Button>
-                                    <i><FiPlus /></i>
-                                </Button>
-                            </ButtonQuantityComponent>
-                            <Price>{product.price}</Price>
-                        </Items>
-                    ))}
-                    {cart.length === 0 && (
 
-                        <Title>
-                            Carrinho de compras vazio
-                        </Title>
-
-                    )}
+               <ItemsModal />
+         
                 </BodyModal>
                 <FooterModal>
                     <TextFooterModal>Total:</TextFooterModal>

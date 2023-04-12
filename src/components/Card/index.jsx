@@ -36,7 +36,6 @@ const Card = () => {
     }
 
     
-
     return (
         <>
             {products.length === 0 ? (
