@@ -28,7 +28,6 @@ export const CardTitleH2 = styled.h2`
     font-size: 1rem;
     line-height: 1rem;
     color: #2C2C2C;
-
 `
 export const CardTitleH3 = styled.h3`
     font-weight: 700;
