@@ -29,7 +29,7 @@ Rodar o comando npm run serve.
 
 Clique no link abaixo para visualizar em desktop: 
 
-https:/
+https://mmc-shop.netlify.app/
 
 ## 📝 Licença
 
