@@ -10,12 +10,12 @@ import {
     CardTitleH3,
     CardSubTitle,
     Button
-} from '../Card/style'
+} from './style'
 
 const Card = () => {
 
     const [products, setProducts] = useState([])
-    // const [id, setId] = useState([])
+    
 
     const getProducts = async () => {
 
@@ -31,8 +31,7 @@ const Card = () => {
 
   
     const handleAddItem = () => { 
-        // setId(products)
-        // console.log(id)
+      
     }
 
     
