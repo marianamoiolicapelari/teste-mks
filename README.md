@@ -23,13 +23,13 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 Acessar no terminal a pasta onde se encontra o projeto Frontend.</br>
 Rodar o comando npm install.</br>
-Rodar o comando npm run serve.
+Rodar o comando npm run dev.
 
 *** ou ***
 
 Clique no link abaixo para visualizar em desktop: 
 
-https:/
+https://mmc-shop.netlify.app/
 
 ## 📝 Licença
 
