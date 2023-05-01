@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const TheFooter = styled.div`
     display: flex;
     justify-content: center;
-    background-color: #EEEEEE;
+    background-color: #EEEEE1;
     padding: 1rem;
     width: 100%;
 `
