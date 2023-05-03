@@ -23,12 +23,13 @@ export const H1 = styled.p`
 `
 
 export const Span = styled.p`
-    color: #FFF;
-    font-size: 1.3rem;
+    color: #000;
+    font-size: 1.8rem;
     font-weight: 300;
-    line-height: 19px;
-    padding-left: .2rem;
+    padding-left: .3rem;
+    font-family: 'Satisfy', cursive;
 `
+
 export const InputShop = styled.input`
     border: none;
     width: 30px;
