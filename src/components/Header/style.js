@@ -36,6 +36,7 @@ export const InputShop = styled.input`
     text-align: center;
     pointer-events: none;
 `
+
 export const Shop = styled.button`
     display: flex;
     align-items: center;
