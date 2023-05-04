@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillCloseCircle } from "react-icons/ai"
 
-import {ItemsModal} from '../ItemsModal'
+import { ItemsModal } from '../ItemsModal'
 
 import {
     TheModal,
@@ -27,8 +27,8 @@ export const Modal = ({ isOpen, setModalOpen }) => {
                 </HeaderModal>
                 <BodyModal>
 
-               <ItemsModal />
-         
+                    <ItemsModal />
+
                 </BodyModal>
                 <FooterModal>
                     <TextFooterModal>Total:</TextFooterModal>
